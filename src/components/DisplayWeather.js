@@ -16,20 +16,23 @@ function DisplayWeather(props) {
             <span className="cardtitle">
               {data.name}, {data.sys.country}. Weather
             </span>
-            <span>As of {new Date().toLocaleTimeString()}</span>
+            <span className="cardsubtitle">
+              As of {new Date().toLocaleTimeString()}</span>
 
-            <h1>
+            <p>
               {" "}
               {Math.floor(data.main.temp - 273.15)}
               <sup>o</sup>
-            </h1>
+            </p>
+
             <span className="weather-main">{data.weather[0].main}</span>
             <img className="weather-icon" src={iconurl} alt="" srcSet="" />
-            <span className="weather-description">
+            {/* <span className="weather-description">
               {" "}
               {data.weather[0].description}
-            </span>
+            </span> */}
           </div>
+        
           {/* Section 1 */}
           <div className="weatherdetails">
             <div className="section1">
@@ -73,6 +76,7 @@ function DisplayWeather(props) {
                 </tbody>
               </table>
             </div>
+
 
             {/* Section 2 */}
             <div>
